@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+This is the execution context.
+Loaded within the iframe.
+Reloaded before every execution run.
+-->
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+</head>
+<body>
+<div class="container">
+
+  <div class="form-container">
+        <h1>Wordpress API demo</h1>
+        <form action="" method="post" class="pure-form form" id="main-form">
+            <div class="form__group">
+                <label class="form__label" for="url">URL:</label>
+                <input data-validation="url" value="developer.wordpress.com" class="form__input" type="text" name="url" placeholder="bez http://" id="url-value" maxlength="100">
+            </div>
+            <div class="form__group">
+                <label class="form__label" for="search-query">Fraza:</label>
+                <input class="form__input" type="text" name="search-query" id="search-value" maxlength="100">
+            </div>
+            <div class="form__group">
+                <label class="form__label" for="order-value">Sortuj wg.:</label>
+                <select class="form__input" name="" id="order-value">
+                    <option value="date" selected="">daty utworzenia</option>
+                    <option value="modified">daty ostatniej modyfikacji</option>
+                    <option value="title">tytu³u</option>
+                </select>
+            </div>
+            <div class="form__group">
+                <label class="form__label" for="number-value">Liczba wpisów.:</label>
+                <input class="form__input" data-validation="range" type="text" data-min="5" data-max="100" value="5" name="number" id="number-value">
+            </div>
+            <div class="form__group centered">
+                <input type="submit" id="submit-button" class="pure-button pure-button-primary" value="Submit" />
+            </div>
+        </form>
+    </div>
+
+    <div class="loader-container">
+        <img src="img/pacman-loader.gif" id="loader" class="loader hidden" alt="" />
+    </div>
+
+    <div class="results-container hidden" id="results-container">
+      <!-- results go here -->
+    </div>
+
+
+</div>
+  <!-- The scripts need to be in the body DOM element, as some test running frameworks need the body
+       to have already been created so they can insert their magic into it. For example, if loaded
+       before body, Angular Scenario test framework fails to find the body and crashes and burns in
+       an epic manner. -->
+  <script src="context.js"></script>
+  <script type="text/javascript">
+    // Configure our Karma and set up bindings
+    %CLIENT_CONFIG%
+    window.__karma__.setupContext(window);
+    // All served files with the latest timestamps
+    %MAPPINGS%
+  </script>
+  <!-- Dynamically replaced with <script> tags -->
+  %SCRIPTS%
+  <script type="text/javascript">
+    window.__karma__.loaded();
+  </script>
+</body>
+</html>

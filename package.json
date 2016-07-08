@@ -1,0 +1,28 @@
+{
+  "name": "wordpress-api-demo",
+  "version": "1.0.0",
+  "description": "simple demo of Wordpress Public API",
+  "main": "app.js",
+  "scripts": {
+    "test": "karma start",
+    "start": "webpack-dev-server --inline"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^2.4.1",
+    "jasmine-expect": "^2.0.2",
+    "jshint": "^2.9.2",
+    "jshint-loader": "^0.8.3",
+    "karma": "^1.1.0",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-coverage": "^1.0.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-jasmine-ajax": "^0.1.13",
+    "karma-phantomjs-launcher": "^1.0.1",
+    "karma-webpack": "^1.7.0",
+    "phantomjs-prebuilt": "^2.1.7",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}

@@ -1,0 +1,59 @@
+<!doctype html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>zadanie - wordpress API</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="form-container">
+        <h1>Wordpress API demo</h1>
+        <form action="" method="post" class="pure-form form" id="main-form">
+            <div class="form__group">
+                <label class="form__label" for="url">URL:</label>
+                <input data-validation="url" value="developer.wordpress.com" class="form__input" type="text" name="url" placeholder="bez http://" id="url-value" maxlength="100">
+            </div>
+            <div class="form__group">
+                <label class="form__label" for="search-query">Fraza:</label>
+                <input class="form__input" type="text" name="search-query" id="search-value" maxlength="100">
+            </div>
+            <div class="form__group">
+                <label class="form__label" for="order-value">Sortuj wg.:</label>
+                <select class="form__input" name="" id="order-value">
+                    <option value="date" selected="">daty utworzenia</option>
+                    <option value="modified">daty ostatniej modyfikacji</option>
+                    <option value="title">tytułu</option>
+                </select>
+            </div>
+            <div class="form__group">
+                <label class="form__label" for="number-value">Liczba wpisów.:</label>
+                <input class="form__input" data-validation="range" type="text" data-min="5" data-max="100" value="5" name="number" id="number-value">
+            </div>
+            <div class="form__group centered">
+                <input type="submit" id="submit-button" class="pure-button pure-button-primary" value="Submit" />
+            </div>
+        </form>
+    </div>
+
+    <div class="loader-container">
+        <img src="img/pacman-loader.gif" id="loader" class="loader hidden" alt="" />
+    </div>
+
+    <div class="results-container hidden" id="results-container">
+      <!-- results go here -->
+    </div>
+
+
+</div>
+    <script src="bundle.js"></script>
+</body>
+
+</html>
