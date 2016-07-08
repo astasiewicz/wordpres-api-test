@@ -1,6 +1,6 @@
 /* jshint browser: true */
 'use strict';
-
+ 
 /** @namespace */
 var Validator = {
     errors: {
