@@ -1,6 +1,8 @@
+require('./main.css'); //webpack will load styles
+
 /* jshint browser: true */
 'use strict';
- 
+
 /** @namespace */
 var Validator = {
     errors: {

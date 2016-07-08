@@ -12,6 +12,8 @@ module.exports = function Testy(config) {
     ],
 
     preprocessors: {
+      // add webpack as preprocessor
+      '**/*.html': ['html2js'],
       // 'test/tests.webpack.js': ['webpack']
       '**/app/*.js': ['coverage']
     },
@@ -25,6 +27,7 @@ module.exports = function Testy(config) {
       'karma-phantomjs-launcher',
       'karma-chrome-launcher',
       'karma-coverage',
+      'karma-html2js-preprocessor',
       'karma-jasmine-ajax'
     ],
     reporters: ['progress', 'coverage'],

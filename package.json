@@ -5,11 +5,18 @@
   "main": "app.js",
   "scripts": {
     "test": "karma start",
-    "start": "webpack-dev-server --inline"
+    "start": "webpack-dev-server",
+    "clean": "rimraf dist/",
+    "build": "rimraf dist/ && webpack"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "^2.22.0",
     "jasmine": "^2.4.1",
     "jasmine-expect": "^2.0.2",
     "jshint": "^2.9.2",
@@ -17,11 +24,15 @@
     "karma": "^1.1.0",
     "karma-chrome-launcher": "^1.0.1",
     "karma-coverage": "^1.0.0",
+    "karma-html2js-preprocessor": "^1.0.0",
     "karma-jasmine": "^1.0.2",
     "karma-jasmine-ajax": "^0.1.13",
     "karma-phantomjs-launcher": "^1.0.1",
     "karma-webpack": "^1.7.0",
     "phantomjs-prebuilt": "^2.1.7",
+    "rimraf": "^2.5.3",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   }
