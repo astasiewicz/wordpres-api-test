@@ -19,8 +19,8 @@ Application will be served from http://localhost:8080/
 
 # Tests
 
-Application can be test using Karma and Jasmine.
+Application can be tested using Karma and Jasmine.
 
 `npm test`
 
-Additionally, test will createa a code coverage under coverage/html/index.html
+Additionally, test will create a code coverage under coverage/html/index.html
