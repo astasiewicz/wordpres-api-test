@@ -4,8 +4,8 @@
 /** @namespace */
 var Validator = {
     errors: {
-        url: 'Podany adres URL jest niepoprawny 1',
-        range: 'Podana wartość jest niepoprawna 12'
+        url: 'Podany adres URL jest niepoprawny',
+        range: 'Podana wartość jest niepoprawna'
     },
     /**
      * Check if number is in given range
