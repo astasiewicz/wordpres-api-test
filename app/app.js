@@ -1,5 +1,3 @@
-require('./main.css'); //webpack will load styles
-
 /* jshint browser: true */
 'use strict';
 
@@ -225,8 +223,6 @@ var App = {
             }
         }
 
-        console.log('this hasErrors', this.hasErrors);
-
         if (this.hasErrors === false) {
             // get posts
             var queryURL = 'https://public-api.wordpress.com/rest/v1.1/sites/' + this.urlElem.value + '/posts/?' +
@@ -239,10 +235,10 @@ var App = {
             this.disableForm();
             this.showLoader();
             this.hideResults();
-            console.log(this.getJSON(queryURL));
+            this.getJSON(queryURL);
         } else {
             // form invalid
-            console.log('Form is invalid');
+            // console.warn('Form is invalid');
         }
     },
     /*
@@ -292,7 +288,6 @@ var App = {
      * @returns {undefined}
      */
     successHandler: function(JSON) {
-        console.log('process this', this);
         // clear current results
         this.clearResults();
         this.hideLoader();
