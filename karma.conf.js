@@ -29,7 +29,6 @@ module.exports = function Testy(config) {
             'karma-phantomjs-launcher',
             'karma-chrome-launcher',
             'karma-coverage',
-            'karma-html2js-preprocessor',
             'karma-jasmine-ajax'
         ],
         reporters: ['progress', 'coverage'],
